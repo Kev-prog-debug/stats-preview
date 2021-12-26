@@ -41,6 +41,9 @@ body {
     padding: 20px;
     h1 {
       font-family: $titleFont;
+      span {
+        color: $accent;
+      }
     }
     p {
       font-family: $textFont;

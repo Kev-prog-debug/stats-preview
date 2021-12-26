@@ -55,6 +55,10 @@ body {
   font-family: "Inter", sans-serif;
 }
 
+#card #text h1 span {
+  color: #aa5cdb;
+}
+
 #card #text p {
   font-family: "Lexend Deca", sans-serif;
   font-size: 14px;
