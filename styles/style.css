@@ -1,0 +1,156 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap");
+body {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background-color: #090b1a;
+  color: white;
+}
+
+#container {
+  height: 100vh;
+  margin: 0 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#card {
+  height: 350px;
+  background-color: #1b1938;
+  border-radius: 5px;
+  width: 60%;
+  color: rgba(255, 255, 255, 0.75);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#card #text {
+  padding: 20px;
+}
+
+#card #text h1 {
+  font-family: "Inter", sans-serif;
+}
+
+#card #text p {
+  font-family: "Lexend Deca", sans-serif;
+  font-size: 14px;
+  font-weight: lighter;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+#card img {
+  width: 500px;
+  height: 100%;
+  border-radius: 0 5px 5px 0;
+}
+
+.status {
+  text-align: center;
+  width: 80%;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.status .statusHeading {
+  font-size: 20px;
+  font-weight: 600;
+  color: white;
+}
+
+.status figcaption {
+  font-size: 12px;
+  font-family: "Lexend Deca", sans-serif;
+  font-weight: lighter;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+@media screen and (max-width: 1440px) {
+  #card {
+    width: 90%;
+  }
+  #card img {
+    width: 40%;
+  }
+}
+
+@media screen and (max-width: 675px) {
+  #card {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    height: auto;
+    width: 80%;
+    text-align: center;
+  }
+  #card img {
+    height: 200px;
+    width: 100%;
+    border-radius: 5px 5px 0 0;
+  }
+  .status {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .status .statusHeading {
+    font-size: 25px;
+    margin-bottom: 15px;
+  }
+}
+/*# sourceMappingURL=style.css.map */
