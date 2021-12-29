@@ -10,7 +10,7 @@ body {
 
 #container {
   height: 100vh;
-  margin: 0 20px;
+  margin: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -24,6 +24,8 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 #card {
@@ -31,6 +33,7 @@ body {
   background-color: #1b1938;
   border-radius: 5px;
   width: 60%;
+  max-width: 1200px;
   color: rgba(255, 255, 255, 0.75);
   display: -webkit-box;
   display: -ms-flexbox;
@@ -48,7 +51,32 @@ body {
 }
 
 #card #text {
-  padding: 20px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0 20px;
+  height: 100%;
+  width: 100%;
+  border-radius: 10px 0 0 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#card #text .showcase-text {
+  font-family: "Lexend Deca", sans-serif;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: lighter;
+  color: rgba(255, 255, 255, 0.6);
 }
 
 #card #text h1 {
@@ -56,26 +84,39 @@ body {
 }
 
 #card #text h1 span {
-  color: #aa5cdb;
+  color: rgba(170, 92, 219, 0.418);
 }
 
 #card #text p {
   font-family: "Lexend Deca", sans-serif;
-  font-size: 14px;
+  font-size: 16px;
+  line-height: 20px;
   font-weight: lighter;
   color: rgba(255, 255, 255, 0.6);
 }
 
-#card img {
-  width: 500px;
+#card .image {
+  width: 90%;
   height: 100%;
-  border-radius: 0 5px 5px 0;
+  background-image: url("/images/image-header-desktop.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  border: none;
+  border-radius: 0 10px 10px 0;
+}
+
+#card .overlay {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(170, 92, 219, 0.418);
+  border-radius: 0 10px 10px 0;
 }
 
 .status {
   text-align: center;
-  width: 80%;
-  margin: auto;
+  width: 100%;
+  margin: 20px auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -91,25 +132,43 @@ body {
           align-items: center;
 }
 
-.status .statusHeading {
+.status article {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.status h1 {
   font-size: 20px;
   font-weight: 600;
+  margin: 5px 0;
   color: white;
 }
 
-.status figcaption {
+.status p {
   font-size: 12px;
   font-family: "Lexend Deca", sans-serif;
   font-weight: lighter;
   color: rgba(255, 255, 255, 0.6);
+  margin: 5px 0;
 }
 
 @media screen and (max-width: 1440px) {
   #card {
     width: 90%;
   }
-  #card img {
-    width: 40%;
+  #card .image {
+    width: 90%;
   }
 }
 
@@ -128,14 +187,45 @@ body {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    height: auto;
+    height: 80%;
     width: 80%;
     text-align: center;
   }
-  #card img {
-    height: 200px;
+  #card .image {
+    height: 100%;
     width: 100%;
-    border-radius: 5px 5px 0 0;
+    border-radius: 10px 10px 0 0;
+  }
+  #card .overlay {
+    border-radius: 10px 10px 0 0;
+  }
+  #card #text {
+    padding: 0;
+    margin: 0;
+    height: 70%;
+    width: 100%;
+    border-radius: 0 0 10px 10px;
+  }
+  #card #text h1 {
+    font-size: 22px;
+    margin: 5px 0;
+  }
+  #card #text .showcase-text {
+    font-size: 14px;
+  }
+  #card #text .status {
+    margin: 10px;
+  }
+  #card #text .status article {
+    padding: 10px;
+  }
+  #card #text .status article h1 {
+    font-size: 20px;
+    font-weight: 400;
+  }
+  #card #text .status article p {
+    font-size: 16px;
+    font-weight: 200;
   }
   .status {
     display: -webkit-box;
@@ -152,7 +242,7 @@ body {
         -ms-flex-align: center;
             align-items: center;
   }
-  .status .statusHeading {
+  .status h1 {
     font-size: 25px;
     margin-bottom: 15px;
   }

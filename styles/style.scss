@@ -1,6 +1,6 @@
 $mainBg: hsl(233, 47%, 7%);
 $cardBg: hsl(244, 38%, 16%);
-$accent: hsl(277, 64%, 61%);
+$accent: hsla(277, 64%, 61%, 0.418);
 
 //neutral
 $white: hsl(0, 0%, 100%);
@@ -27,18 +27,33 @@ body {
 }
 #container {
   height: 100vh;
-  margin: 0 20px;
+  margin: 0;
   @include flex(center, center, row);
+  box-sizing: border-box;
 }
 #card {
   height: 350px;
   background-color: $cardBg;
   border-radius: 5px;
   width: 60%;
+  max-width: 1200px;
   color: $mainParagraph;
   @include flex(space-between, center, row);
   #text {
-    padding: 20px;
+    box-sizing: border-box;
+    padding: 0 20px;
+    height: 100%;
+    width: 100%;
+    // border: 1px solid red;
+    border-radius: 10px 0 0 10px;
+    @include flex(space-around, center, column);
+    .showcase-text {
+      font-family: $textFont;
+      font-size: 16px;
+      line-height: 20px;
+      font-weight: lighter;
+      color: $statHeadings;
+    }
     h1 {
       font-family: $titleFont;
       span {
@@ -47,58 +62,113 @@ body {
     }
     p {
       font-family: $textFont;
-      font-size: 14px;
+      font-size: 16px;
+      line-height: 20px;
       font-weight: lighter;
       color: $statHeadings;
     }
   }
-  img {
-    width: 500px;
+  // img {
+  //   width: 500px;
+  //   height: 100%;
+  //   border-radius: 0 5px 5px 0;
+  //   mix-blend-mode: normal;
+  // }
+  .image {
+    width: 90%;
     height: 100%;
-    border-radius: 0 5px 5px 0;
+    background-image: url("/images/image-header-desktop.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    border: none;
+    border-radius: 0 10px 10px 0;
+  }
+  .overlay {
+    width: 100%;
+    height: 100%;
+    background-color: $accent;
+    border-radius: 0 10px 10px 0;
   }
 }
 
 .status {
   text-align: center;
-  width: 80%;
-  margin: auto;
+  width: 100%;
+  margin: 20px auto;
   @include flex(space-between, center, row);
-  .statusHeading {
+  article {
+    @include flex(space-between, center, column);
+  }
+  h1 {
     font-size: 20px;
     font-weight: 600;
+    margin: 5px 0;
     color: $white;
   }
-  figcaption {
+  p {
     font-size: 12px;
     font-family: $textFont;
     font-weight: lighter;
     color: $statHeadings;
+    margin: 5px 0;
   }
 }
 @media screen and (max-width: 1440px) {
   #card {
     width: 90%;
-    img {
-      width: 40%;
+    .image {
+      width: 90%;
     }
   }
 }
+
 @media screen and (max-width: 675px) {
   #card {
     @include flex(center, center, column-reverse);
-    height: auto;
+    height: 80%;
     width: 80%;
     text-align: center;
-    img {
-      height: 200px;
+    .image {
+      height: 100%;
       width: 100%;
-      border-radius: 5px 5px 0 0;
+      border-radius: 10px 10px 0 0;
+    }
+    .overlay {
+      border-radius: 10px 10px 0 0;
+    }
+    #text {
+      padding: 0;
+      margin: 0;
+      height: 70%;
+      width: 100%;
+      border-radius: 0 0 10px 10px;
+      h1 {
+        font-size: 22px;
+        margin: 5px 0;
+      }
+      .showcase-text {
+        font-size: 14px;
+      }
+      .status {
+        margin: 10px;
+        article {
+          padding: 10px;
+          h1 {
+            font-size: 20px;
+            font-weight: 400;
+          }
+          p {
+            font-size: 16px;
+            font-weight: 200;
+          }
+        }
+      }
     }
   }
   .status {
     @include flex(space-between, center, column);
-    .statusHeading {
+    h1 {
       font-size: 25px;
       margin-bottom: 15px;
     }

@@ -1,65 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- displays site properly based on user's device -->
 
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="./images/favicon-32x32.png"
-    />
-    <link rel="stylesheet" href="/styles/style.css" />
-    <title>Frontend Mentor | Stats preview card component</title>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- displays site properly based on user's device -->
 
-    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-    <style>
-      .attribution {
-        font-size: 11px;
-        text-align: center;
-      }
-      .attribution a {
-        color: hsl(228, 45%, 44%);
-      }
-    </style>
-  </head>
-  <body>
-    <div id="container">
-      <div id="card">
-        <article id="text">
-          <h1>Get <span>insights</span> that help your business grow.</h1>
-          <p>
-            Discover the benefits of data analytics and make better decisions
-            regarding revenue, customer experience, and overall efficiency.
-          </p>
-          <!-- status goes here -->
-          <section class="status">
-            <article>
-              <h1 class="statusHeading">10k+</h1>
-              <figcaption>COMPANIES</figcaption>
-            </article>
-            <article>
-              <h1 class="statusHeading">314</h1>
-              <figcaption>TEMPLATES</figcaption>
-            </article>
-            <article>
-              <h1 class="statusHeading">12M+</h1>
-              <figcaption>QUERIES</figcaption>
-            </article>
-          </section>
-        </article>
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
+  <link rel="stylesheet" href="/styles/style.css" />
+  <title>Frontend Mentor | Stats preview card component</title>
 
-        <img src="/images/image-header-desktop.jpg" alt="" />
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
+  </style>
+</head>
+
+<body>
+  <div id="container">
+    <div id="card">
+      <article id="text">
+        <h1>Get <span>insights</span> that help your business grow.</h1>
+        <p class="showcase-text">
+          Discover the benefits of data analytics and make better decisions
+          regarding revenue, customer experience, and overall efficiency.
+        </p>
+        <!-- status goes here -->
+        <section class="status">
+          <article>
+            <h1>10k+</h1>
+            <p>COMPANIES</p>
+          </article>
+          <article>
+            <h1>314</h1>
+            <p>TEMPLATES</p>
+          </article>
+          <article>
+            <h1>12M+</h1>
+            <p>QUERIES</p>
+          </article>
+        </section>
+      </article>
+      <div class="image">
+        <!-- <img src="/images/image-header-desktop.jpg" alt="" /> -->
+        <div class="overlay"></div>
       </div>
     </div>
+  </div>
 
-    <div class="attribution">
-      Challenge by
-      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
-        >Frontend Mentor</a
-      >. Coded by <a href="#">Kev-prog-debug</a>.
-    </div>
-  </body>
+  <div class="attribution">
+    Challenge by
+    <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. Coded by <a
+      href="#">Kev-prog-debug</a>.
+  </div>
+</body>
+
 </html>
